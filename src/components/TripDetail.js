@@ -10,7 +10,9 @@ const TripDetail = (props) => {
 
   const triprecommend = trips
     .filter(
-      (fliteredtrip) => fliteredtrip.difficulty === trip.difficulty && fliteredtrip.id !== trip.id
+      (fliteredtrip) =>
+        fliteredtrip.difficulty === trip.difficulty &&
+        fliteredtrip.id !== trip.id
     )
     .map((fliteredtrip) => <Items key={fliteredtrip.id} trip={fliteredtrip} />);
 
