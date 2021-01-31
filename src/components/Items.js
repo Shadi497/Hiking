@@ -9,6 +9,7 @@ const Items = (props) => {
       <p>{props.trip.city}</p>
       <p>{props.trip.difficulty}</p>
       <p>{props.trip.rating}</p>
+      <p>{props.trip.length}</p>
       {/* <p>trip.des</p> */}
     </Wrapper>
   );

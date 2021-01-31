@@ -33,3 +33,11 @@ export const SearchBarStyled = styled.input`
   display: block;
   width: 40%;
 `;
+
+export const ProgressBarStyled = styled.input`
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 25%;
+  height: 20px;
+`;
