@@ -1,24 +1,33 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
+export const GlobalStyle = createGlobalStyle`
+body{
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+`;
 export const ListWrapper = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const DetailWrapper = styled.div`
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 60%;
+  margin: auto;
 
   img {
-    width: 40%;
+    width: 30%;
     float: left;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
   }
 
   p {
-    vertical-align: middle;
+    display: block;
   }
 `;
 
@@ -60,4 +69,21 @@ export const ProgressBarStyled = styled.input`
   display: block;
   width: 25%;
   height: 20px;
+`;
+
+export const Bg = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  hight: 20%;
+`;
+
+export const BackButton = styled.button`
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  margin-left: 10px;
+  border-radius: 1rem;
+  color: #000;
+  background-color: #0076af;
 `;
