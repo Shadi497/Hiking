@@ -1,28 +1,56 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { NavLink } from "react-router-dom";
 
+export const GlobalStyle = createGlobalStyle`
+body{
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+`;
 export const ListWrapper = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const DetailWrapper = styled.div`
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 60%;
+  margin: auto;
 
   img {
-    width: 40%;
+    width: 30%;
     float: left;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
   }
 
   p {
-    vertical-align: middle;
+    display: block;
+  }
+`;
+
+export const NavTrip = styled(NavLink)`
+  font-size: 25px;
+  padding-right: 25px;
+  margin-left: 350px;
+  color: red;
+  font-weight: bold;
+  &.active {
+    color: black;
+    font-weight: bold;
   }
 `;
 
 export const Ranger = styled.div`
+  margin-left: 35px;
+  margin-top: 70px;
+  margin-bottom: 35px;
+`;
+
+export const DropdownStyle = styled.div`
   margin-left: 35px;
 `;
 
@@ -44,6 +72,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
+  margin-top: 35px;
   text-align: center;
 `;
 
@@ -60,4 +89,21 @@ export const ProgressBarStyled = styled.input`
   display: block;
   width: 25%;
   height: 20px;
+`;
+
+export const Bg = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  hight: 20%;
+`;
+
+export const BackButton = styled.button`
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  margin-left: 10px;
+  border-radius: 1rem;
+  color: #000;
+  background-color: #0076af;
 `;

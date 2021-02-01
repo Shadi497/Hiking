@@ -1,4 +1,4 @@
-import { DetailWrapper } from "../styles";
+import { DetailWrapper, BackButton } from "../styles";
 import { useParams, Redirect, Link } from "react-router-dom";
 import trips from "./Trips";
 import Items from "./Items";
@@ -20,20 +20,17 @@ const TripDetail = (props) => {
 
   return (
     <DetailWrapper>
+      <h2>{trip.name}</h2>
       <img alt={trip.name} src={trip.image} />
-      <h1>{trip.name}</h1>
-      <p>{trip.city}</p>
+      <p>The City: {trip.city}</p>
       <p>{trip.des}</p>
       <p>{trip.length} miles</p>
-      <p>{trip.difficulty}</p>
-      <p>{trip.rating}</p>
+      <p>The Difficulty: {trip.difficulty}</p>
+      <p>The Rating: {trip.rating}</p>
       <Link to={`/trips`}>
-        <button onClick={() => props.setTrip(null)}>Back</button>
+        <BackButton onClick={() => props.setTrip(null)}>Back</BackButton>
       </Link>
-
-      {/* <Link to={`/trips/the-needles-traverse`}>
-        <button onClick={() => props.setTrip(null)}>Recommend Trips</button>
-      </Link> */}
+      <h2>Recommended Trips</h2>
       {triprecommend}
       {/* <button onClick={() => props.setTrip()}>{triprecommend}</button> */}
     </DetailWrapper>
